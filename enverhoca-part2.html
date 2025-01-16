@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kişisel Blog</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#top">Ana Menü</a></li>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#favori-yazilar">Yazılarım</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+        <li><a href="#oneriler">Öneriler</a></li>
+        <li><a href="#sss">SSS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Görsel Alanı (Header) -->
+    <section class="hero">
+      <img src="ht.jpeg" alt="Header Görseli" class="hero-image" />
+      <div class="overlay">
+        <h1>BLOG SAYFAMA HOŞGELDİNİZ</h1>
+        <button id="likeButton">Beğen</button>
+        <span id="likeMessage" class="hidden">Beğendin!</span>
+      </div>
+    </section>
+
+    <!-- Hakkımda ve Favori Yazılar Bölümü -->
+    <section id="hakkimda" class="about">
+      <div class="container">
+        <h2>Hakkımda</h2>
+        <p>
+          Merhaba! Ben Zülfikar, teknoloji dünyasına olan tutkumla bu blogu
+          oluşturdum. Kendimi bildim bileli yeniliklere ve teknolojinin
+          hayatımıza kattığı kolaylıklara hayranlık duyuyorum. Gelişen
+          teknoloji, sadece yaşamlarımızı değil, düşünce biçimlerimizi ve iş
+          yapma yöntemlerimizi de şekillendiriyor.
+        </p>
+
+        <!-- Favori Yazılarım -->
+        <div id="favori-yazilar" class="favorites-box">
+          <h3>Favori Yazılarım</h3>
+          <ul>
+            <li>
+              <a href="Python-Veri-Bilimi.html">Python ile Veri Bilimi</a>
+            </li>
+            <li>
+              <a href="Programlamanın-Güçleri.html">Programlamanın Güçleri</a>
+            </li>
+            <li>
+              <a href="Python-Neden--Muhteşem-Bir-Dil.html"
+                >Python Neden Muhteşem Bir Dil?</a
+              >
+            </li>
+            <li><a href="web'in-temel-dili .html">Web'in Temel Dili</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Öneri Formu -->
+    <section id="oneriler" class="suggestions">
+      <div class="container">
+        <h2>Önerileriniz Bizim İçin Önemli</h2>
+        <form id="suggestionForm">
+          <input type="text" id="name" placeholder="Ad Soyad" required />
+          <select id="gender" required>
+            <option value="" disabled selected>Cinsiyet</option>
+            <option value="Erkek">Erkek</option>
+            <option value="Kadın">Kadın</option>
+            <option value="Diğer">Diğer</option>
+          </select>
+          <input
+            type="email"
+            id="email"
+            placeholder="E-posta Adresiniz"
+            required
+          />
+          <input
+            type="date"
+            id="birthdate"
+            placeholder="Doğum Tarihi"
+            required
+          />
+          <textarea id="message" placeholder="Öneriniz" required></textarea>
+          <button type="submit">Gönder</button>
+        </form>
+        <div id="thankYouMessage" class="hidden">
+          Önerileriniz için teşekkür ederiz!
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri Bölümü -->
+    <section id="galeri" class="gallery">
+      <div class="container">
+        <h2>Galeri</h2>
+        <div class="gallery-grid">
+          <div class="item">
+            <img src="related-1.jpg" alt="Galeri Resim 1" />
+          </div>
+          <div class="item">
+            <img src="related-2.jpg" alt="Galeri Resim 2" />
+          </div>
+          <div class="item">
+            <img src="related-3.jpg" alt="Galeri Resim 3" />
+          </div>
+          <div class="item">
+            <img src="related-3.jpg" alt="Galeri Resim 4" />
+          </div>
+          <div class="item">
+            <img src="related-2.jpg" alt="Galeri Resim 5" />
+          </div>
+          <div class="item">
+            <img src="related-1.jpg" alt="Galeri Resim 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="iletisim" class="contact">
+      <div class="container">
+        <h2>İletişim</h2>
+        <form action="iletisim.php" method="POST">
+          <input type="text" name="name" placeholder="Adınız" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="E-posta Adresiniz"
+            required
+          />
+          <textarea name="message" placeholder="Mesajınız" required></textarea>
+          <button type="submit">Gönder</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SSS bölümü -->
+    <section id="sss" class="faq">
+      <div class="container">
+        <h2>Sıkça Sorulan Sorular</h2>
+        <div class="faq-item">
+          <button class="faq-question">
+            Blog içeriği hakkında nasıl bilgi alabilirim?
+          </button>
+          <div class="faq-answer">
+            Blogumuzda yer alan içerikler, teknoloji ve yeniliklere dair geniş
+            kapsamlı bilgiler sunmaktadır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Favori yazılarım nerede bulunur?</button>
+          <div class="faq-answer">
+            Favori yazılar bölümü, Hakkımda kısmının altında yer almaktadır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            İletişim bilgilerimi nasıl gönderebilirim?
+          </button>
+          <div class="faq-answer">
+            İletişim formunu kullanarak bizimle iletişime geçebilirsiniz. Formu
+            doldurduktan sonra "Gönder" butonuna tıklayın.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer bölümü -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Zülfikar'ın Blogu. Tüm Hakları Saklıdır.</p>
+        <p>
+          <a href="#">Gizlilik Politikası</a> |
+          <a href="#">Kullanım Şartları</a>
+        </p>
+        <!-- Sosyal Medya Bağlantıları -->
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon"
+            ><img src="facebook-icon.jpeg" alt="Facebook"
+          /></a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon"
+            ><img src="twitter-icon.jpeg" alt="Twitter"
+          /></a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="social-icon"
+            ><img src="instagram-icon.jpeg" alt="Instagram"
+          /></a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-icon"
+            ><img src="linkedin-icon.jpeg" alt="LinkedIn"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="enverhoca -part2.js"></script>
+  </body>
+</html>
